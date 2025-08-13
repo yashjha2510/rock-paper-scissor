@@ -1,5 +1,7 @@
 let choices = document.querySelectorAll(".choice img");
 let msg = document.querySelector("#msg");
+let uScore = document.querySelector("#user-score");
+let cScore = document.querySelector("#comp-score");
 
 let userScore = 0;
 let compScore = 0;
@@ -22,10 +24,12 @@ const showwinner = (userwin) => {
     if (userwin) {
         console.log("you win!!");
         msg.innerText = "you win!!";
+        uScore.innerText = (userScore = userScore+1);
     }
     else {
         console.log("you loose");
         msg.innerText = "you loose";
+        cScore.innerText = (compScore = compScore+1);
     }
 }
 
