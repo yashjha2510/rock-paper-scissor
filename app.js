@@ -15,29 +15,33 @@ const compChoice = () => {
 
 //function to draw game
 const drawgame = () => {
-    console.log("match was draw");
+    // console.log("match was draw");
     msg.innerText = "match was draw";
+    msg.classList.add("defaultClr");
 }
 
 //show winner function
-const showwinner = (userwin) => {
+const showwinner = (userwin, userChoice, comChoice) => {
     if (userwin) {
-        console.log("you win!!");
-        msg.innerText = "you win!!";
+        // console.log("you win!!");
+        msg.innerText = `you win!! ${userChoice} beats ${comChoice}`;
         uScore.innerText = (userScore = userScore+1);
+        msg.classList.add("green");
     }
     else {
-        console.log("you loose");
-        msg.innerText = "you loose";
+        // console.log("you loose");
+        msg.innerText = `you loose, ${comChoice} beats ${userChoice}`;
         cScore.innerText = (compScore = compScore+1);
+        msg.classList.add("red");
     }
 }
 
 // function to find the winner
 const playgame = (userChoice) => {
-    console.log("user choice = ", userChoice);
+    msg.classList.remove("green", "red", "defaultClr");
+    // console.log("user choice = ", userChoice);
     const comChoice = compChoice();
-    console.log("comp. choice = ", comChoice);
+    // console.log("comp. choice = ", comChoice);
 
     //condition to find winner
     if(userChoice === comChoice) {
@@ -76,7 +80,7 @@ const playgame = (userChoice) => {
             }
         }
         //print the winner name
-        showwinner(userwin);
+        showwinner(userwin, userChoice, comChoice);
     }
 }
 

@@ -62,3 +62,15 @@ h1 {
     padding: 1rem;
     border-radius: 5rem;
 }
+
+#msg.green {
+    background-color: green;
+}
+
+#msg.red {
+    background-color: red;
+}
+
+#msg.defaultClr {
+    background-color: #081b31;
+}
