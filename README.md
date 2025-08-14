@@ -37,7 +37,7 @@ rock-paper-scissors/
 - Same choices result in a draw
 
 ## 📸 Screenshot
-![Game Screenshot](screenshots/game-screenshot.png)
+![Game Screenshot](screenshot/game-screenshot.png)
 
 ## 📜 License
 This project is open-source and free to use.
