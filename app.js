@@ -96,5 +96,3 @@ choices.forEach((img) => {
     // console.log(img);
     img.addEventListener("click", handleChoiceClick);
 })
-
-
